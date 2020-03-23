@@ -1,6 +1,3 @@
-<!-- MADE BY CATALIN -->
-<!-- DISCORD: TripleZone#8501 -->
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <?php

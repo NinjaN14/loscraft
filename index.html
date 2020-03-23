@@ -1,125 +1,202 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <!-- Feel free to add any additional html elements in here as well -->
-    <title>CursedCraft | Custom Survival Server</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="CursedCraft is a custom made Survival server with many different new features! Custom mobs, bosses, items and more!">
-    <meta name="keywords" content="Cursed, Craft, CursedCraft, Curse, Survival, Minecraft, Mine, Vanilla, Semi-Vanilla, Custom, Bosses, Staff, Server">
-    <meta name="author" content="CursedCraft">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="css\mainpage.css">    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script>$(document).ready(function() {
-    var onlineplayers = 0;
-    var maxplayers = 0;
-    
-    xhr = new XMLHttpRequest();
-    var url = "https://use.gameapis.net/mc/query/players/Play.CursedCraft.com";
-    xhr.open("GET", url, true);
-    xhr.onreadystatechange = function () { 
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            var json = JSON.parse(xhr.responseText);
-            if(json.status == false) { $("#serverip h1").text("0/0 Players Online!"); return; }
-            
-            onlineplayers = json.players.online;
-            maxplayers = json.players.max;
-            $("#serverip h1").text("" + onlineplayers + "/" + maxplayers + " Players Online!");
+<html lang="pt-br" dir="ltr">
+  <head>
+    <title>LoSCraft</title>
+    <meta name="description" content="Servidor Survival 1.15.2">
+    <link rel="stylesheet" href="assets/style.min.css">
+    <link rel="shortcut icon" href="imagini/favicon.png" type="image/vnd.microsoft.icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="" id="shadow-open">
+      <div class="mobile-navigation" id="mobile-nav">
+        <button type="button" name="button" id="close-nav"><i class="fas fa-arrow-left"></i></button>
+        <div class="header-mobile-navigation">
+          <img src="imagini/server-logo.png" class="logo-counter" style="width: 200px;">
+        </div>
+        <div class="body-mobile-navigation">
+          <div class="navigatie-mobil">
+            <p>Navegação</p>
+          </div>
+          <ul>
+            <li>
+                <a href="../" target="_self" class="false">
+                    <i class="fas fa-home"></i> Início
+                </a>
+            </li>
+            <li>
+                <a href="/tutoriais" target="_self" class="false">
+                    <i class="fas fa-graduation-cap"></i> Tutoriais
+                </a>
+            </li>
+            <li>
+                <a href="/vote" target="_self" class="false">
+                    <i class="fas fa-thumbs-up"></i> Vote
+                </a>
+            </li>
+            <li>
+                <a href="http://loja.loscraft.com.br" target="_blank" class="store">
+                    <i class="fas fa-gem steluta"></i> Loja
+                </a>
+            </li>
+            <li>
+                <a href="/equipe" target="_self" class="false">
+                    <i class="fas fa-user-friends"></i> Equipe
+                </a>
+            </li>
+            <li>
+                <a href="/changelog" target="_self" class="false">
+                    <i class="fas fa-book"></i> Changelog
+                </a>
+            </li>
+            <li>
+                <a href="/punicoes" target="_self" class="false">
+                    <i class="fas fa-ban"></i> Punições
+                </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="loadingcontainer hidden"><div class="roata"></div></div></div>
+    <div class="catalin-header">
+        <nav class="catalin-navigatie">
+            <div class="container">
+            <ul class="catalin-nav-social" id="catalin-navi-social">
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            </ul>
+            <ul class="catalin-nav-links">
+              <li id="button-open"><button type="button" id="open-nav" name="button"><i class="fas fa-bars"></i></button></li>
+              <div id="testare-hide">
+                <li>
+                    <a href="../" target="_self" class="false">
+                        <i class="fas fa-home"></i> Início
+                    </a>
+                </li>
+                <li>
+                    <a href="/tutoriais" target="_self" class="false">
+                        <i class="fas fa-graduation-cap"></i> Tutoriais
+                    </a>
+                </li>
+                <li>
+                    <a href="/vote" target="_self" class="false">
+                        <i class="fas fa-thumbs-up"></i> Vote
+                    </a>
+                </li>
+                <li>
+                    <a href="http://loja.loscraft.com.br" target="_blank" class="store">
+                        <i class="fas fa-gem steluta"></i> Loja
+                    </a>
+                </li>
+                <li>
+                    <a href="/equipe" target="_self" class="false">
+                        <i class="fas fa-user-friends"></i> Equipe
+                    </a>
+                </li>
+                <li>
+                    <a href="/changelog" target="_self" class="false">
+                        <i class="fas fa-book"></i> Changelog
+                    </a>
+                </li>
+                <li>
+                    <a href="/punicoes" target="_self" class="false">
+                        <i class="fas fa-ban"></i> Punições
+                    </a>
+                </li>
+              </div>
+            </ul>
+          </nav>
+          <div class="catalin-header-content">
+            <div class="container">
+            <div class="coloana-3" id="coloana-3">
+              <div class="cutie-1" id="cutie-1">
+                <ul>
+                  <a href="https://discord.gg/Kmy8UdR" target="_blank" style="text-decoration: none;">
+                  <ul class="directia-elementelor-secundare">
+                    <li class="element-secundar"><h3>Discord Server</h3></li>
+                    <li class="element-secundar"><p><span id="discord-count">?</span> online agora</p></li>
+                  </ul>
+                  <ul class="directie-elemente">
+                    <li class="principalul-element"><i class="fab fa-discord discord-spatiu"></i></li>
+                  </ul>
+                  </a>
+                  </ul>
+              </div>
+                <div class="cutie-2" id="cutie-2">
+                  <img src="imagini/server-logo.png" height="auto" width="400px" class="logo-counter">
+                </div>
+              <div class="cutie-3" id="cutie-3">
+                <a href="#" style="text-decoration: none;" id="copiazaIP">
+                  <ul class="directie-elemente">
+                    <li class="principalul-element"><i class="fas fa-play-circle server-spatiu"></i></li>
+                  </ul>
+                  <ul class="directia-elementelor-secundare" style="margin-right: 0px;">
+                    <li class="element-secundar"><h3 class="play-button-design"><span class="player-count">?</span> jogadores online</h3></li>
+                    <li class="element-secundar"><p class="play-button-design-gray">Comece sua aventura agora!</p></li>
+                  </ul>
+                </a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+  <?php //SECTION OF ANNUNCEMENTS!
+    createAnnouncements();
+  ?>
+</div>
+<div class="store-sale">
+  <div class="container">
+    <a href="http://loja.loscraft.com.br">Visite nossa loja</a>
+  </div>
+</div>
+<div class="footer">
+  <img src="imagini/server-logo.png" class="gray-animatie" alt="poke-logo">
+  <p>© 2019 LoSCraft. Todos os direitos reservados.</p>
+  <p>LoSCraft não é de forma alguma afiliado a Mojang ou Microsoft.</p>
+  <input type="text" id="ipServer" value="jogar.loscraft.com.br"/>
+</div>
+<button class="mergisus" style="display: inline-block;"><span></span></button>
+  </body>
 
-            $("#serverBoxOuter").html("<input id=\"serverBoxIP\" style=\"background: transparent;opacity:0;outline:none;border:none;\" value=\"Play.CursedCraft.com\">");
-        }
-    }
-    
-    xhr.send();
-});
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="script/index.js"></script>
+  <script type="text/javascript">
 
-function CopyIP() {    
-    var inp = document.getElementById("serverBoxIP");
+  function arataJucatori() {
+    const player = "jogar.loscraft.com.br";
+    const port = "25565";
+    $.getJSON('https://api.minetools.eu/ping/' + player + "/" + port, function(status) {
+        var jucatoriOnline = status.players.online;
+        $(".player-count").html(((jucatoriOnline = jucatoriOnline.toString().split("."))[0] = jucatoriOnline[0].replace(/\B(?=(\d{3})+(?!\d))/g, ","), jucatoriOnline.join(".")));
+    });
+  }
 
-    if(inp && inp.select) {    
-        if($(inp).val() == "Copied!") return false;
+    arataJucatori();
+    test = setInterval(arataJucatori, 1000);
 
-        inp.select();
+    const discord_widget_id = "477288944162177034";
+    $.get('https://discordapp.com/api/guilds/'+ discord_widget_id +'/embed.json', function(d){
+    	let members = d['members'];
+    	let online_count = members.length;
+    	$('#discord-count').html(online_count);
+    });
 
-        try {
-            document.execCommand("copy");
-            inp.blur();
-            $("#serverip h3").html("Copied!");
-            setTimeout(function () {
-                $("#serverip h3").html("Play.CursedCraft.com");        
-            }, 1800);
-        }
-        catch (err) {
-            alert("Please press Ctrl/Cmd+C to copy the server ip.");
-        }
-    }
-}</script>	<link href="pace\orange\pace-theme-flash.css" rel="stylesheet">
-	<script src='pace\pace.min.js' type='text/javascript'></script>
-</head>
-<body>
-    <p>
-        Sugerido por alguns jogadores, agora os tokens de mineração tiveram sua chance de drop modificada. 
-        Segue a baixo como funcionará agora:
-        <center><table class="tabela">
-            <thead>
-                <td>Nível</td>
-                <td>Chance de Dropar</td>
-            </thead>
-            <tr>
-                <td>0-99</td>
-                <td>0%</td>
-            </tr>
-            <tr>
-                <td>100-249</td>
-                <td>0.1%</td>
-            </tr>
-            <tr>
-                <td>250-499</td>
-                <td>0.2%</td>
-            </tr>
-            <tr>
-                <td>500-749</td>
-                <td>0.3%</td>
-            </tr>
-            <tr>
-                <td>750-1000</td>
-                <td>0.4%</td>
-            </tr>
-            <tr>
-                <td>1000</td>
-                <td>0.5%</td>
-            </tr>
-        </table></center>
-    </p>
-    <p> 
-        Com o intuito de incentivar mais ainda os jogadores a votarem no servidor, 
-        lançamos algumas novidades bem legais ao votar.
-        Ao alcançar algumas metas de votos você poderá receber alguns itens extras!
-        <center>
-            <table class="tabela">
-                <thead>
-                    <td>Votos</td>
-                    <td>Recompensa</td>
-                </thead>
-                <tr>
-                    <td>10</td>
-                    <td>10 <span style="color:lightblue;">Diamantes</span></td>
-                </tr>
-                <tr>
-                    <td>50</td>
-                    <td>1 <span style="font-weight: bold; color: yellow;">Token COMUM</span></td>
-                </tr>
-                <tr>
-                    <td>100</td>
-                    <td>1 <span style="font-weight: bold; color: darkcyan;">Token RARO</span></td>
-                </tr>
-                <tr>
-                    <td>150</td>
-                    <td>1 <span style="font-weight: bold; color: darkred;">Token LENDÁRIO</span></td>
-                </tr>
-            </table>
-        </center>
-    </p>
-</body>
+      $( document ).ready(function() {
+    $('.agata').on('click', function() {
+       $('.modal-wrapper').toggleClass('open');
+      $('.page-wrapper').toggleClass('blur-it');
+       return false;
+    });
+  });
+
+  document.documentElement.style.setProperty('--main-color', '#25a2a2');
+
+</script>
 </html>
