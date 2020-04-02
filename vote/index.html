@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<?php
+include '../config/config.php';
+include '../config/votes.php';
+include('../script/AI.php');
+include('../config/navigation.php');
+?>
+  <head>
+    <title><?php echo $title_of_page; ?></title>
+    <meta name="description" content="<?php echo $description_of_page; ?>">
+    <link rel="stylesheet" href="../assets/style.min.css">
+    <link rel="shortcut icon" href="../imagini/favicon.png" type="image/vnd.microsoft.icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta charset="utf-8">
+  </head>
+  <body>
+</div>
+<!-- LOADER ANIMATION -->
+<div class="" id="shadow-open">
+  <div class="mobile-navigation" id="mobile-nav">
+    <button type="button" name="button" id="close-nav"><i class="fas fa-arrow-left"></i></button>
+    <div class="header-mobile-navigation">
+      <img src="../imagini/server-logo.png" class="logo-counter" style="width: 200px;">
+    </div>
+    <div class="body-mobile-navigation">
+        <div class="navigatie-mobil">
+          <p>Navegação</p>
+        </div>
+        <ul>
+          <li>
+              <a href="../" target="_self" class="false">
+                  <i class="fas fa-home"></i> Início
+              </a>
+          </li>
+          <li>
+              <a href="/tutoriais" target="_self" class="false">
+                  <i class="fas fa-graduation-cap"></i> Tutoriais
+              </a>
+          </li>
+          <li>
+              <a href="/vote" target="_self" class="false">
+                  <i class="fas fa-thumbs-up"></i> Vote
+              </a>
+          </li>
+          <li>
+              <a href="http://loja.loscraft.com.br" target="_blank" class="store">
+                  <i class="fas fa-gem steluta"></i> Loja
+              </a>
+          </li>
+          <li>
+              <a href="/equipe" target="_self" class="false">
+                  <i class="fas fa-user-friends"></i> Equipe
+              </a>
+          </li>
+          <li>
+              <a href="/changelog" target="_self" class="false">
+                  <i class="fas fa-book"></i> Changelog
+              </a>
+          </li>
+          <li>
+              <a href="/punicoes" target="_self" class="false">
+                  <i class="fas fa-ban"></i> Punições
+              </a>
+          </li>
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="loadingcontainer hidden"><div class="roata"></div></div></div>
+<div class="catalin-header">
+    <nav class="catalin-navigatie">
+        <div class="container">
+        <ul class="catalin-nav-social" id="catalin-navi-social">
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        </ul>
+        <ul class="catalin-nav-links">
+          <li id="button-open"><button type="button" id="open-nav" name="button"><i class="fas fa-bars"></i></button></li>
+          <div id="testare-hide">
+            <li>
+                <a href="../" target="_self" class="false">
+                    <i class="fas fa-home"></i> Início
+                </a>
+            </li>
+            <li>
+                <a href="/tutoriais" target="_self" class="false">
+                    <i class="fas fa-graduation-cap"></i> Tutoriais
+                </a>
+            </li>
+            <li>
+                <a href="/vote" target="_self" class="false">
+                    <i class="fas fa-thumbs-up"></i> Vote
+                </a>
+            </li>
+            <li>
+                <a href="http://loja.loscraft.com.br" target="_blank" class="store">
+                    <i class="fas fa-gem steluta"></i> Loja
+                </a>
+            </li>
+            <li>
+                <a href="/equipe" target="_self" class="false">
+                    <i class="fas fa-user-friends"></i> Equipe
+                </a>
+            </li>
+            <li>
+                <a href="/changelog" target="_self" class="false">
+                    <i class="fas fa-book"></i> Changelog
+                </a>
+            </li>
+            <li>
+                <a href="/punicoes" target="_self" class="false">
+                    <i class="fas fa-ban"></i> Punições
+                </a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+      <div class="catalin-header-content">
+        <div class="container">
+        <div class="coloana-3" id="coloana-3">
+          <div class="cutie-1" id="cutie-1">
+            <ul>
+              <a href="https://discord.gg/Kmy8UdR" target="_blank" style="text-decoration: none;">
+              <ul class="directia-elementelor-secundare">
+                <li class="element-secundar"><h3>Discord Server</h3></li>
+                <li class="element-secundar"><p><span id="discord-count">?</span> online agora</p></li>
+              </ul>
+              <ul class="directie-elemente">
+                <li class="principalul-element"><i class="fab fa-discord discord-spatiu"></i></li>
+              </ul>
+              </a>
+              </ul>
+          </div>
+            <div class="cutie-2" id="cutie-2">
+              <img src="imagini/server-logo.png" height="auto" width="400px" class="logo-counter">
+            </div>
+          <div class="cutie-3" id="cutie-3">
+            <a href="#" style="text-decoration: none;" id="copiazaIP">
+              <ul class="directie-elemente">
+                <li class="principalul-element"><i class="fas fa-play-circle server-spatiu"></i></li>
+              </ul>
+              <ul class="directia-elementelor-secundare" style="margin-right: 0px;">
+                <li class="element-secundar"><h3 class="play-button-design"><span class="player-count">?</span> jogadores online</h3></li>
+                <li class="element-secundar"><p class="play-button-design-gray">Comece sua aventura agora!</p></li>
+              </ul>
+            </a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+    <div class="container">
+      <div class="vote-content">
+        <div class="vote-big-box" id="vote-big-box">
+          <img src="../imagini/server-logo.png" height="200px">
+            <p>Vote diariamente para ajudar o servidor a crescer e receba recompesas!</p>
+            <br>
+            <p>Para votar no servidor, entre nos links ao lado, coloque seu nick usado no Servidor e complete o captcha.</p>
+            <p>Lembre-se de estar online no servidor para receber as recompensas automaticamente!</p>
+            <br>
+            <b>Recompensas</b>
+          <div class="vote-rewards">
+            <hr width="50%" style="margin: 0 auto 0 auto;">
+            <div class="vote-reward"><p>1 Token de Voto</p></div>
+            <div class="vote-reward"><p>$500</p></div>
+          </div>
+          <hr width="25%" style="margin: 10px auto;">
+        </div>
+        <div class="vote-medium-box" id="vote-medium-box">
+          <div class="vote-medium-box-header">
+            <h3><i class="fas fa-hand-spock"></i> Links de Voto </h3>
+          </div>
+          <div class="vote-medium-box-body">
+            <a href="http://bit.ly/losvoto1" target="_blank"><i class="fas fa-thumbs-up"></i> Vote #1</a>
+            <a href="http://bit.ly/losvoto3" target="_blank"><i class="fas fa-thumbs-up"></i> Vote #2</a>
+            <a href="http://bit.ly/losvoto4" target="_blank"><i class="fas fa-thumbs-up"></i> Vote #3</a>
+            <a href="http://bit.ly/losvoto5" target="_blank"><i class="fas fa-thumbs-up"></i> Vote #4</a>
+            <a href="http://bit.ly/losvoto6" target="_blank"><i class="fas fa-thumbs-up"></i> Vote #5</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="store-sale">
+        <div class="container">
+          <a href="http://loja.loscraft.com.br">Visite nossa loja</a>
+        </div>
+      </div>
+      <div class="footer">
+        <img src="imagini/server-logo.png" class="gray-animatie" alt="poke-logo">
+        <p>© 2019 LoSCraft. Todos os direitos reservados.</p>
+        <p>LoSCraft não é de forma alguma afiliado a Mojang ou Microsoft.</p>
+        <input type="text" id="ipServer" value="jogar.loscraft.com.br"/>
+      </div>
+    <button class="mergisus" style="display: inline-block;"><span></span></button>
+  </body>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="../script/index.js"></script>
+  <script type="text/javascript">
+
+    function arataJucatori() {
+      const player = "<?php echo $ip_server;?>";
+      const port = "<?php echo $port_server;?>";
+      $.getJSON('https://api.minetools.eu/ping/' + player + "/" + port, function(status) {
+          var jucatoriOnline = status.players.online;
+          $(".player-count").html(((jucatoriOnline = jucatoriOnline.toString().split("."))[0] = jucatoriOnline[0].replace(/\B(?=(\d{3})+(?!\d))/g, ","), jucatoriOnline.join(".")));
+      });
+    }
+
+    arataJucatori();
+    test = setInterval(arataJucatori, 1000);
+    const discord_widget_id = "<?php echo $discord_widget_id;?>";
+    $.get('https://discordapp.com/api/guilds/'+ discord_widget_id +'/embed.json', function(d){
+    	let members = d['members'];
+    	let online_count = members.length;
+    	$('#discord-count').html(online_count);
+    });
+
+      $( document ).ready(function() {
+    $('.agata').on('click', function() {
+       $('.modal-wrapper').toggleClass('open');
+      $('.page-wrapper').toggleClass('blur-it');
+       return false;
+    });
+  });
+
+  document.documentElement.style.setProperty('--main-color', '<?php echo $main_color; ?>');
+
+</script>
+</html>
