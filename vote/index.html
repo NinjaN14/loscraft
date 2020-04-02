@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
-<?php
-include '../config/config.php';
-include '../config/votes.php';
-include('../script/AI.php');
-include('../config/navigation.php');
-?>
-  <head>
-    <title><?php echo $title_of_page; ?></title>
-    <meta name="description" content="<?php echo $description_of_page; ?>">
-    <link rel="stylesheet" href="../assets/style.min.css">
-    <link rel="shortcut icon" href="../imagini/favicon.png" type="image/vnd.microsoft.icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <meta charset="utf-8">
-  </head>
+    <head>
+        <title>LoSCraft</title>
+        <meta name="description" content="Servidor Survival 1.15.2">
+        <link rel="stylesheet" href="../assets/style.min.css">
+        <link rel="shortcut icon" href="../imagini/favicon.png" type="image/vnd.microsoft.icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <meta charset="utf-8">
+      </head>
   <body>
 </div>
 <!-- LOADER ANIMATION -->
@@ -136,7 +130,7 @@ include('../config/navigation.php');
               </ul>
           </div>
             <div class="cutie-2" id="cutie-2">
-              <img src="imagini/server-logo.png" height="auto" width="400px" class="logo-counter">
+              <img src="../imagini/server-logo.png" height="auto" width="400px" class="logo-counter">
             </div>
           <div class="cutie-3" id="cutie-3">
             <a href="#" style="text-decoration: none;" id="copiazaIP">
@@ -190,7 +184,7 @@ include('../config/navigation.php');
         </div>
       </div>
       <div class="footer">
-        <img src="imagini/server-logo.png" class="gray-animatie" alt="poke-logo">
+        <img src="../imagini/server-logo.png" class="gray-animatie" alt="poke-logo">
         <p>© 2019 LoSCraft. Todos os direitos reservados.</p>
         <p>LoSCraft não é de forma alguma afiliado a Mojang ou Microsoft.</p>
         <input type="text" id="ipServer" value="jogar.loscraft.com.br"/>
@@ -203,8 +197,8 @@ include('../config/navigation.php');
   <script type="text/javascript">
 
     function arataJucatori() {
-      const player = "<?php echo $ip_server;?>";
-      const port = "<?php echo $port_server;?>";
+      const player = "jogar.loscraft.com.br";
+      const port = "25565";
       $.getJSON('https://api.minetools.eu/ping/' + player + "/" + port, function(status) {
           var jucatoriOnline = status.players.online;
           $(".player-count").html(((jucatoriOnline = jucatoriOnline.toString().split("."))[0] = jucatoriOnline[0].replace(/\B(?=(\d{3})+(?!\d))/g, ","), jucatoriOnline.join(".")));
@@ -213,7 +207,7 @@ include('../config/navigation.php');
 
     arataJucatori();
     test = setInterval(arataJucatori, 1000);
-    const discord_widget_id = "<?php echo $discord_widget_id;?>";
+    const discord_widget_id = "477288944162177034";
     $.get('https://discordapp.com/api/guilds/'+ discord_widget_id +'/embed.json', function(d){
     	let members = d['members'];
     	let online_count = members.length;
@@ -228,7 +222,7 @@ include('../config/navigation.php');
     });
   });
 
-  document.documentElement.style.setProperty('--main-color', '<?php echo $main_color; ?>');
+  document.documentElement.style.setProperty('--main-color', '#25a2a2');
 
 </script>
 </html>
