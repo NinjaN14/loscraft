@@ -1,0 +1,66 @@
+.factions-body {
+    text-align: center;
+    background-image: url(https://loja.redesky.com/image/catalog/factions/general-background.jpg);
+    background-position: center;
+    background-color: #000;
+    background-repeat: no-repeat;
+}
+
+.factions-logo {
+    background-image: url(https://loja.redesky.com/image/catalog/factions/logo.png);
+    width: 632px;
+    height: 168px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 4rem 0;
+}
+
+.category-title {
+    background: #0d64ff !important;
+    border-left: 5px solid #0d64ff;
+    border-right: 5px solid #0d64ff;
+}
+
+.product-table h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-table table>tbody>tr:nth-child(odd)>td:nth-child(even) {
+    background-color: #10151b;
+}
+
+.product-table table>tbody>tr:nth-child(even)>td:nth-child(even) {
+    background-color: #0e1217;
+}
+
+.product-table table>tbody>tr:nth-child(odd)>td:nth-child(odd) {
+    background-color: #18202b;
+}
+
+.product-table table>tbody>tr:nth-child(even)>td:nth-child(odd) {
+    background-color: #11171f;
+}
+
+.product-table table>tbody>tr:nth-child(odd)>td:first-child {
+    background-color: #e2e2e2;
+}
+
+.product-table table>tbody>tr:nth-child(even)>td:first-child {
+    background-color: #eaeaea;
+}
+
+.category-title[data-toggle=collapse] .fa-chevron-up {
+    margin-left: 5px;
+    font-size: 16px;
+    vertical-align: initial;
+    transition-duration: .35s;
+}
+
+.category-title[data-toggle=collapse].collapsed .fa-chevron-up {
+    transform: rotate(180deg);
+}
+
+.product-list {
+    background-color: #10151b;
+}
