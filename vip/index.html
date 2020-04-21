@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<htmldir="ltr" lang="pt-br">
+    <!--<![endif]-->
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>VIP</title>
+
+        <base href="http://www.loscraft.com.br/" />
+
+        <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700|Ubuntu:regular,bold&subset=Latin" rel="stylesheet" type="text/css" />
+        <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="d55233f8a004ec785bbdf85d-text/javascript"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js" type="d55233f8a004ec785bbdf85d-text/javascript"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js" type="d55233f8a004ec785bbdf85d-text/javascript"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" type="d55233f8a004ec785bbdf85d-text/javascript"></script>
+        <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> -->
+        <!-- <script defer src="https://use.fontawesome.com/releases/4.7.0/js/v4-shims.js"></script> -->
+        <link rel="icon" type="image/png" href="catalog/view/theme/default/image/favicons/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="catalog/view/theme/default/image/favicons/favicon-16x16.png" sizes="16x16" />
+
+    </head>
+
+    <body>
+        <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="d55233f8a004ec785bbdf85d-|49" defer=""></script>
+        <link href="catalog/view/theme/default/stylesheet/factions.css" rel="stylesheet">
+        <div class="container">
+
+
+            <!-- TEMPORÁRIO -->
+            <style>
+                .promotion_ {
+                    font-weight: 700;
+                    font-size: 18px;
+                    padding: 10px 15px;
+                    background: #ff0036;
+                    position: relative;
+                    top: -20px;
+                    border-radius: 5px;
+                    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+                }
+                
+                .category-title {
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: #ffffff !important;
+                }
+                
+                .modal-body {
+                    position: relative;
+                    padding: 15px;
+                    text-align: left;
+                    width: 430px;
+                }
+                
+                .modal-body p {
+                    color: #202020;
+                    text-shadow: unset;
+                    font-size: 16px;
+                    font-weight: 100;
+                }
+                
+                .modal-header {
+                    text-align: left;
+                    padding: 15px 15px 0;
+                }
+                
+                .modal-header h1 {
+                    color: #404040;
+                    text-shadow: unset;
+                    font-size: 19px;
+                    text-transform: capitalize;
+                }
+                
+                .modal-header,
+                .modal-footer {
+                    border: 0;
+                }
+                
+                .modal-content {
+                    background: #c6c6c6;
+                    border-top: 5px solid #ffffff;
+                    border-left: 5px solid #ffffff;
+                    border-right: 5px solid #555555;
+                    border-bottom: 5px solid #555555;
+                    width: fit-content;
+                    margin: 0 auto;
+                }
+                
+                .modal-content img {
+                    background: #8b8b8b;
+                    padding: 5px;
+                    border-left: 2px solid #5f5f5f;
+                    border-top: 2px solid #5f5f5f;
+                    border-right: 2px solid #d7d7d7;
+                    border-bottom: 2px solid #d7d7d7;
+                }
+                
+                .modal-content img:hover {
+                    opacity: 0.8;
+                }
+                
+                .modal-content img:hover+.item-information {
+                    display: block;
+                }
+                
+                .item-information {
+                    display: none;
+                    background-color: rgba(0, 0, 0, 0.9);
+                    position: absolute;
+                    top: -10px;
+                    left: 125%;
+                    width: max-content;
+                    padding: 10px;
+                    border-radius: 5px;
+                    z-index: 1;
+                    text-align: left;
+                }
+                
+                .item-information p {
+                    color: #aaaaaa;
+                    margin: 5px 0 0;
+                }
+                
+                .item-information h1 {
+                    color: #ffffff;
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    font-weight: 100;
+                }
+                
+                .product-table a {
+                    color: #ffffff;
+                }
+                
+                .modal-body span {
+                    position: absolute;
+                    bottom: -1px;
+                    right: -1px;
+                    font-size: 20px;
+                    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
+                    pointer-events: none;
+                }
+                
+                .item {
+                    margin-top: 3px;
+                    display: inline-block;
+                    position: relative;
+                }
+                
+                .click {
+                    font-size: 0.7em;
+                    border-radius: 1rem;
+                    border: solid 1px #505050;
+                    padding: 1rem;
+                }
+            </style>
+
+            <div class="product-table hidden-sm hidden-xs">
+                <table id="table-accordion">
+                    <tbody>
+                        <tr>
+                            <td style="background-color: unset"></td>
+                            <td>
+                                <h1>SEM VIP</h1>
+                            </td>
+                            <td>
+                                <h1>VIP</h1>
+                                <p>
+                                    <br>R$ 19,92
+                                </p>
+                                <a class="button background-green border-bottom-green" href="https://loja.redesky.com/index.php?route=product/vip&amp;path=85_88&amp;product_id=152">Comprar</a>
+                            </td>
+                            <td>
+                                <h1>SUPER</h1>
+                                <p>
+                                    <br>R$ 34,93
+                                </p>
+                                <a class="button background-green border-bottom-green" href="https://loja.redesky.com/index.php?route=product/vip&amp;path=85_88&amp;product_id=153">Comprar</a>
+                            </td>
+                            <td>
+                                <h1>ULTRA</h1>
+                                <p>
+                                    <!-- span class="old">R$ 89,90</span -->
+                                    <br>R$ 53,94
+                                </p>
+                                <a class="button background-green border-bottom-green" href="https://loja.redesky.com/index.php?route=product/vip&amp;path=85_88&amp;product_id=154">Comprar</a>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="category-title category-48">
+                                BENEFICIOS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="attribute-info" data-toggle="tooltip" data-original-title="Receba uma tag exclusiva no Factions Eclipse, fórum e também em nosso Discord.">
+                                    <i class="fa fa-info-circle"></i> Tag exclusiva
+                                </div>
+                            </td>
+
+                            <td>
+                                <i class="fa fa-times" style="opacity: 0.5"></i>
+                            </td>
+                            <td>
+                                <img src="https://i.imgur.com/FHrPJzv.png">
+                            </td>
+                            <td>
+                                <img src="https://i.imgur.com/zEsd2Qz.png">
+                            </td>
+                            <td>
+                                <img src="https://i.imgur.com/wET7ETc.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="attribute-info" data-toggle="tooltip" data-original-title="Jogadores VIP não precisam esperar para se teletransportar entre os locais.">
+                                    <i class="fa fa-info-circle"></i> Teletransportes Instantâneos
+                                </div>
+                            </td>
+
+                            <td>
+                                <i class="fa fa-times" style="opacity: 0.5"></i>
+                            </td>
+                            <td>
+                                <i class="fa fa-check"></i>
+                            </td>
+                            <td>
+                                <i class="fa fa-check"></i>
+                            </td>
+                            <td>
+                                <i class="fa fa-check"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="category-title category-49">
+                                Comandos
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="attribute-info" data-toggle="tooltip" data-original-title="Permite acessar o Enderchest remotamente.">
+                                    <i class="fa fa-info-circle"></i> /enderchest
+                                </div>
+                            </td>
+
+                            <td>
+                                <i class="fa fa-times" style="opacity: 0.5"></i>
+                            </td>
+                            <td>
+                                <i class="fa fa-check"></i>
+                            </td>
+                            <td>
+                                <i class="fa fa-check"></i>
+                            </td>
+                            <td>
+                                <i class="fa fa-check"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="category-title category-50">
+                                Kits
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Básico
+                            </td>
+
+                            <td>
+                                Kit Padrão
+                            </td>
+                            <td>
+                                Kit VIP
+                            </td>
+                            <td>
+                                Kit MVP
+                            </td>
+                            <td>
+                                Kit MVP+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Diário
+                            </td>
+
+                            <td>
+                                <i class="fa fa-times" style="opacity: 0.5"></i>
+                            </td>
+                            <td>
+                                Kit VIP
+                            </td>
+                            <td>
+                                Kit MVP
+                            </td>
+                            <td>
+                                Kit MVP+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Semanal
+                            </td>
+
+                            <td>
+                                <i class="fa fa-times" style="opacity: 0.5"></i>
+                            </td>
+                            <td>
+                                Kit VIP
+                            </td>
+                            <td>
+                                Kit MVP
+                            </td>
+                            <td>
+                                Kit MVP+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Mensal
+                            </td>
+
+                            <td>
+                                <i class="fa fa-times" style="opacity: 0.5"></i>
+                            </td>
+                            <td>
+                                Kit VIP
+                            </td>
+                            <td>
+                                Kit MVP
+                            </td>
+                            <td>
+                                Kit MVP+
+                            </td>
+                        </tr>
+
+                    </tbody>
+            </div>
+    </body>
+
+    </html>
